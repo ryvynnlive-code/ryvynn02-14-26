@@ -121,3 +121,53 @@ export interface UsageTracker {
   api_calls_count: number
   daily_goals_created: number
 }
+
+// ============================================
+// FEATURE KEY ENUM
+// ============================================
+
+/**
+ * Feature keys matching data/tier_matrix.json
+ * TIER_VERSION: 2026-01-v1
+ */
+export enum FeatureKey {
+  AVATAR_SELECTION = 'avatar_selection',
+  AGE_TIER_SWITCHING = 'age_tier_switching',
+  VOICE_INTERACTION = 'voice_interaction',
+  JOURNALING = 'journaling',
+  GOALS_DAILY = 'goals_daily',
+  COPING_MODULES = 'coping_modules',
+  MINI_COURSES = 'mini_courses',
+  ANALYTICS_TRENDS = 'analytics_trends',
+  WEEKLY_SUMMARY = 'weekly_summary',
+  CALENDAR_SYNC = 'calendar_sync',
+  WEARABLE_SYNC = 'wearable_sync',
+  API_ACCESS = 'api_access',
+  CUSTOM_AVATAR = 'custom_avatar',
+  PERSONALITY_SLIDERS = 'personality_sliders',
+  PREDICTIVE_INSIGHTS = 'predictive_insights',
+  HUMAN_COACHING = 'human_coaching',
+}
+
+/**
+ * Tier version constant for grandfathering
+ * Update this when tier structure changes
+ */
+export const TIER_VERSION = '2026-01-v1' as const
+
+/**
+ * Billing cadence options
+ */
+export type BillingCadence = 'monthly' | 'annual'
+
+/**
+ * Subscription status from Stripe
+ */
+export type SubscriptionStatus =
+  | 'active'
+  | 'canceled'
+  | 'incomplete'
+  | 'incomplete_expired'
+  | 'past_due'
+  | 'trialing'
+  | 'unpaid'
