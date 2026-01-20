@@ -1,0 +1,399 @@
+{
+  "gender_personas": [
+    {
+      "id": "feminine",
+      "name": "Feminine",
+      "default_names": ["Aria", "Luna", "Sage", "Willow", "Aurora"],
+      "description": "Warm, nurturing, collaborative approach",
+      "language_style": {
+        "tone": "warm",
+        "approach": "nurturing",
+        "emphasis": "connection and understanding"
+      },
+      "example_scenarios": [
+        "Work-life balance challenges",
+        "Relationship dynamics",
+        "Self-care routines",
+        "Emotional processing",
+        "Boundary setting"
+      ],
+      "response_patterns": {
+        "greeting": "Hi, I'm here for you. How are you feeling today?",
+        "reflection_prefix": "I hear that you're feeling...",
+        "validation_style": "That makes complete sense given what you're going through.",
+        "encouragement": "You're doing the best you can, and that's enough."
+      },
+      "voice_profile": {
+        "pitch": "medium",
+        "pace": "gentle",
+        "warmth": "high",
+        "style": "conversational"
+      }
+    },
+    {
+      "id": "masculine",
+      "name": "Masculine",
+      "default_names": ["Atlas", "Blaze", "Reed", "Orion", "Phoenix"],
+      "description": "Direct, supportive, action-oriented approach",
+      "language_style": {
+        "tone": "steady",
+        "approach": "direct",
+        "emphasis": "action and solutions"
+      },
+      "example_scenarios": [
+        "Goal achievement and productivity",
+        "Stress management at work",
+        "Setting boundaries",
+        "Physical wellness",
+        "Leadership challenges"
+      ],
+      "response_patterns": {
+        "greeting": "Hey. What's on your mind?",
+        "reflection_prefix": "Sounds like you're dealing with...",
+        "validation_style": "That's a real challenge. Makes sense you'd feel that way.",
+        "encouragement": "You've got this. Let's figure out the next step."
+      },
+      "voice_profile": {
+        "pitch": "lower",
+        "pace": "confident",
+        "warmth": "medium",
+        "style": "straightforward"
+      }
+    },
+    {
+      "id": "nonbinary",
+      "name": "Nonbinary/Custom",
+      "default_names": ["Nova", "River", "Sky", "Ash", "Quinn"],
+      "description": "Neutral, affirming, flexible approach",
+      "language_style": {
+        "tone": "balanced",
+        "approach": "affirming",
+        "emphasis": "authenticity and exploration"
+      },
+      "example_scenarios": [
+        "Identity exploration",
+        "Authenticity in relationships",
+        "Self-acceptance",
+        "Navigating social expectations",
+        "Finding community"
+      ],
+      "response_patterns": {
+        "greeting": "Hello. I'm here to support you. What's going on?",
+        "reflection_prefix": "It sounds like...",
+        "validation_style": "Your experience is valid, and I'm here for it.",
+        "encouragement": "You're on your own unique path, and that's powerful."
+      },
+      "voice_profile": {
+        "pitch": "neutral",
+        "pace": "adaptive",
+        "warmth": "medium-high",
+        "style": "flexible"
+      }
+    }
+  ],
+  "age_tiers": [
+    {
+      "id": "youth",
+      "name": "Youth",
+      "age_range": "13-17",
+      "description": "School, peer relationships, family, identity formation",
+      "context_focus": [
+        "School and academic stress",
+        "Peer relationships and social dynamics",
+        "Family dynamics and communication",
+        "Identity formation and self-discovery",
+        "Future planning and uncertainty"
+      ],
+      "language_adjustments": {
+        "reading_level": "4th-5th grade",
+        "vocabulary": "simple, age-appropriate",
+        "examples": "school, friends, parents, extracurriculars",
+        "references": "contemporary youth culture"
+      },
+      "safety_enhancements": {
+        "crisis_detection_sensitivity": "heightened",
+        "parental_notification_option": true,
+        "resource_emphasis": "teen-specific hotlines and support"
+      },
+      "content_guidelines": {
+        "avoid": ["Adult-specific topics", "Complex relationship issues"],
+        "emphasize": ["Resilience", "Growth mindset", "Peer support"],
+        "tone": "Encouraging, non-judgmental, relatable"
+      },
+      "example_prompts": {
+        "check_in": "How's school been? Anything on your mind today?",
+        "coping_tool": "Try the 5-4-3-2-1 grounding technique when you feel overwhelmed: name 5 things you see, 4 you can touch, 3 you hear, 2 you smell, and 1 you taste.",
+        "next_step": "Maybe talk to a trusted friend or teacher about what you're feeling."
+      }
+    },
+    {
+      "id": "young_adult",
+      "name": "Young Adult",
+      "age_range": "18-29",
+      "description": "Career, independence, relationships, life transitions",
+      "context_focus": [
+        "Career development and job stress",
+        "Building independence",
+        "Romantic relationships",
+        "Friendships and social life",
+        "Life transitions (college, first job, etc.)"
+      ],
+      "language_adjustments": {
+        "reading_level": "5th-6th grade",
+        "vocabulary": "contemporary, relatable",
+        "examples": "work, dating, roommates, student loans",
+        "references": "modern adult life, social media, hustle culture"
+      },
+      "safety_enhancements": {
+        "crisis_detection_sensitivity": "standard",
+        "resource_emphasis": "peer support groups, crisis text lines"
+      },
+      "content_guidelines": {
+        "avoid": ["Parenting advice", "Retirement planning"],
+        "emphasize": ["Exploration", "Building skills", "Finding purpose"],
+        "tone": "Supportive, empowering, realistic"
+      },
+      "example_prompts": {
+        "check_in": "What's been going on with you? Work, life, everything in between?",
+        "coping_tool": "When work stress hits, take a 5-minute walk outside. Fresh air and movement can reset your mindset.",
+        "next_step": "Consider setting one small boundary at work this week—like not checking emails after 7 PM."
+      }
+    },
+    {
+      "id": "adult",
+      "name": "Adult",
+      "age_range": "30-49",
+      "description": "Career stability, parenting, relationships, health",
+      "context_focus": [
+        "Career advancement or transitions",
+        "Parenting challenges",
+        "Long-term relationships",
+        "Work-life balance",
+        "Health and self-care"
+      ],
+      "language_adjustments": {
+        "reading_level": "5th grade (simple but not condescending)",
+        "vocabulary": "practical, time-conscious",
+        "examples": "kids' schedules, mortgage, career pivots",
+        "references": "juggling responsibilities, sustainability"
+      },
+      "safety_enhancements": {
+        "crisis_detection_sensitivity": "standard",
+        "resource_emphasis": "family support, therapy options, employee assistance programs"
+      },
+      "content_guidelines": {
+        "avoid": ["Youth-specific slang", "Retirement focus"],
+        "emphasize": ["Balance", "Sustainability", "Practical strategies"],
+        "tone": "Respectful, pragmatic, validating"
+      },
+      "example_prompts": {
+        "check_in": "How are you holding up? I know you've got a lot on your plate.",
+        "coping_tool": "Try scheduling 15 minutes just for you—no kids, no work. Even sitting quietly with coffee counts.",
+        "next_step": "What's one thing you could delegate or drop this week to free up space?"
+      }
+    },
+    {
+      "id": "mature",
+      "name": "Mature",
+      "age_range": "50+",
+      "description": "Transitions, legacy, health, relationships",
+      "context_focus": [
+        "Life transitions (retirement, empty nest)",
+        "Health management",
+        "Relationships (partners, adult children, grandchildren)",
+        "Legacy and meaning-making",
+        "Community and contribution"
+      ],
+      "language_adjustments": {
+        "reading_level": "5th grade (clear, respectful)",
+        "vocabulary": "dignified, wisdom-honoring",
+        "examples": "retirement, grandkids, health checkups",
+        "references": "life experience, wisdom, contribution"
+      },
+      "safety_enhancements": {
+        "crisis_detection_sensitivity": "standard",
+        "resource_emphasis": "health monitoring, community connection, senior support services"
+      },
+      "content_guidelines": {
+        "avoid": ["Ageist assumptions", "Dismissive tone"],
+        "emphasize": ["Meaning", "Contribution", "Acceptance", "Connection"],
+        "tone": "Respectful, affirming, collaborative"
+      },
+      "example_prompts": {
+        "check_in": "How have things been for you lately?",
+        "coping_tool": "When stress arises, try a gentle walk or a few minutes of stretching. Movement supports both body and mind.",
+        "next_step": "Consider reaching out to a friend or community group. Connection matters more than ever."
+      }
+    }
+  ],
+  "response_templates": {
+    "reflection": {
+      "feminine": "I hear that {emotion}. {validation}",
+      "masculine": "Sounds like {situation}. {acknowledgment}",
+      "nonbinary": "It sounds like {experience}. {affirmation}"
+    },
+    "next_step": {
+      "feminine": "One thing you could try: {suggestion}. How does that feel?",
+      "masculine": "Here's a next step: {suggestion}. Worth a shot?",
+      "nonbinary": "You might consider: {suggestion}. What feels right to you?"
+    },
+    "coping_tool": {
+      "general": "Coping tool: {technique}. {simple_instruction}.",
+      "youth": "Try this: {technique}. It can help when things feel overwhelming.",
+      "young_adult": "Quick tool: {technique}. Works even when you're busy.",
+      "adult": "Practical technique: {technique}. Takes just a few minutes.",
+      "mature": "Gentle approach: {technique}. Adjust as needed for your comfort."
+    }
+  },
+  "crisis_keywords": {
+    "high_priority": [
+      "kill myself",
+      "end my life",
+      "suicide",
+      "want to die",
+      "better off dead",
+      "end it all",
+      "no reason to live",
+      "hurt myself",
+      "take my life"
+    ],
+    "medium_priority": [
+      "self harm",
+      "cut myself",
+      "harm myself",
+      "hate myself",
+      "worthless",
+      "hopeless",
+      "no point",
+      "give up"
+    ],
+    "youth_specific": [
+      "run away",
+      "no one cares",
+      "everyone hates me",
+      "school shooter"
+    ]
+  },
+  "coping_modules": [
+    {
+      "id": "5_min_calm",
+      "name": "5-Minute Calm",
+      "description": "Quick breathing and grounding technique",
+      "duration_minutes": 5,
+      "steps": [
+        "Find a quiet spot and sit comfortably.",
+        "Close your eyes or lower your gaze.",
+        "Breathe in slowly for 4 counts.",
+        "Hold for 4 counts.",
+        "Breathe out for 4 counts.",
+        "Repeat 5 times.",
+        "Notice how your body feels now."
+      ],
+      "available_tiers": [1, 2, 3, 4]
+    },
+    {
+      "id": "worry_tree",
+      "name": "Worry Tree",
+      "description": "Structured approach to managing worries",
+      "duration_minutes": 10,
+      "steps": [
+        "Write down your worry.",
+        "Ask: Can I do something about this now?",
+        "If YES: What's one small action I can take?",
+        "If NO: Let it go for now. Set a time to revisit if needed.",
+        "Practice this with each worry that comes up."
+      ],
+      "available_tiers": [1, 2, 3, 4]
+    },
+    {
+      "id": "grounding_sequence",
+      "name": "Grounding Sequence",
+      "description": "5-4-3-2-1 sensory grounding",
+      "duration_minutes": 5,
+      "steps": [
+        "Name 5 things you can see around you.",
+        "Name 4 things you can touch or feel.",
+        "Name 3 things you can hear right now.",
+        "Name 2 things you can smell (or 2 you like).",
+        "Name 1 thing you can taste (or 1 you enjoy).",
+        "Take a deep breath. You're here, you're safe."
+      ],
+      "available_tiers": [1, 2, 3, 4]
+    },
+    {
+      "id": "thought_reframe",
+      "name": "Thought Reframe",
+      "description": "Challenge unhelpful thoughts",
+      "duration_minutes": 10,
+      "steps": [
+        "Notice the thought: What am I telling myself?",
+        "Is this thought 100% true? What's the evidence?",
+        "What would I tell a friend in this situation?",
+        "Reframe: What's a more balanced way to see this?",
+        "Practice this reframe when the thought returns."
+      ],
+      "available_tiers": [1, 2, 3, 4]
+    },
+    {
+      "id": "values_check",
+      "name": "Values Check-In",
+      "description": "Reconnect with what matters",
+      "duration_minutes": 15,
+      "steps": [
+        "List 3 things you value most (e.g., family, creativity, health).",
+        "For each value, ask: Am I living in alignment with this?",
+        "Where am I off track? What's one small step to realign?",
+        "Choose one value to focus on this week.",
+        "Notice how this feels."
+      ],
+      "available_tiers": [1, 2, 3, 4]
+    }
+  ],
+  "mini_courses": [
+    {
+      "id": "resilience_fundamentals",
+      "name": "Resilience Fundamentals",
+      "description": "5-session program on building mental resilience",
+      "sessions": 5,
+      "duration_per_session_minutes": 15,
+      "topics": [
+        "What is resilience?",
+        "Identifying your strengths",
+        "Building a support network",
+        "Coping with setbacks",
+        "Sustaining resilience over time"
+      ],
+      "available_tiers": [2, 3, 4]
+    },
+    {
+      "id": "stress_management_toolkit",
+      "name": "Stress Management Toolkit",
+      "description": "7-session course on practical stress reduction",
+      "sessions": 7,
+      "duration_per_session_minutes": 20,
+      "topics": [
+        "Understanding stress and its impact",
+        "Breathing and relaxation techniques",
+        "Time management basics",
+        "Setting healthy boundaries",
+        "Physical activity for stress relief",
+        "Sleep hygiene fundamentals",
+        "Building a personal stress plan"
+      ],
+      "available_tiers": [2, 3, 4]
+    },
+    {
+      "id": "sleep_hygiene_basics",
+      "name": "Sleep Hygiene Basics",
+      "description": "3-session course on improving sleep quality",
+      "sessions": 3,
+      "duration_per_session_minutes": 10,
+      "topics": [
+        "Sleep science: Why sleep matters",
+        "Creating a sleep-friendly environment",
+        "Building a bedtime routine"
+      ],
+      "available_tiers": [2, 3, 4]
+    }
+  ]
+}
