@@ -3,6 +3,8 @@
 import { createClient, createAdminClient } from '@/lib/supabase/server'
 import { generateFlameResponse, detectCrisisLevel, getCrisisSafetyMessage } from '@/lib/flame/engine'
 import { redirect } from 'next/navigation'
+import { getCurrentTier } from '@/lib/features/flags'
+import { getTierName } from '@/lib/billing/stripe-map'
 
 export async function callFlame(userMessage: string) {
   try {
@@ -21,7 +23,24 @@ export async function callFlame(userMessage: string) {
       }
     }
 
-    // Check usage limits
+    // Get user entitlements (tier-based limits)
+    const { data: entitlement } = await adminClient
+      .from('entitlements')
+      .select('current_tier, flame_conversations_per_day')
+      .eq('user_id', user.id)
+      .single()
+
+    if (!entitlement) {
+      return {
+        success: false,
+        error: 'User entitlements not found. Please contact support.',
+      }
+    }
+
+    const limit = entitlement.flame_conversations_per_day
+    const tierName = getTierName(entitlement.current_tier)
+
+    // Check daily usage
     const { data: usage } = await adminClient
       .from('usage_daily')
       .select('flame_calls')
@@ -29,21 +48,18 @@ export async function callFlame(userMessage: string) {
       .eq('date', new Date().toISOString().split('T')[0])
       .single()
 
-    const { data: profile } = await supabase
-      .from('profiles')
-      .select('plan')
-      .eq('user_id', user.id)
-      .single()
-
-    const limit = profile?.plan === 'premium' ? 100 : 5
     const currentUsage = usage?.flame_calls || 0
 
-    if (currentUsage >= limit) {
+    // Enforce limit (999999 = unlimited for Tier 3+)
+    if (limit < 999999 && currentUsage >= limit) {
       return {
         success: false,
         error: 'Daily limit reached',
         limit,
         usage: currentUsage,
+        tier: entitlement.current_tier,
+        tierName,
+        upgrade_required: true,
       }
     }
 
@@ -92,6 +108,7 @@ export async function callFlame(userMessage: string) {
 export async function getFlameUsage() {
   try {
     const supabase = await createClient()
+    const adminClient = createAdminClient()
 
     const {
       data: { user },
@@ -101,26 +118,33 @@ export async function getFlameUsage() {
       return null
     }
 
-    const { data: usage } = await supabase
+    // Get entitlements (tier-based limits)
+    const { data: entitlement } = await adminClient
+      .from('entitlements')
+      .select('current_tier, flame_conversations_per_day')
+      .eq('user_id', user.id)
+      .single()
+
+    if (!entitlement) {
+      return null
+    }
+
+    // Get today's usage
+    const { data: usage } = await adminClient
       .from('usage_daily')
       .select('flame_calls')
       .eq('user_id', user.id)
       .eq('date', new Date().toISOString().split('T')[0])
       .single()
 
-    const { data: profile } = await supabase
-      .from('profiles')
-      .select('plan')
-      .eq('user_id', user.id)
-      .single()
-
-    const limit = profile?.plan === 'premium' ? 100 : 5
     const currentUsage = usage?.flame_calls || 0
+    const limit = entitlement.flame_conversations_per_day
 
     return {
       usage: currentUsage,
-      limit,
-      plan: profile?.plan || 'free',
+      limit: limit >= 999999 ? 'unlimited' : limit,
+      tier: entitlement.current_tier,
+      tierName: getTierName(entitlement.current_tier),
     }
   } catch (error) {
     console.error('Error getting usage:', error)
