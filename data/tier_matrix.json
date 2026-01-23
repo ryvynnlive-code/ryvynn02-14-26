@@ -1,0 +1,529 @@
+{
+  "tiers": [
+    {
+      "id": 0,
+      "name": "Base",
+      "display_name": "Ryvynn Base",
+      "tagline": "Try RYVYNN's core support with no commitment",
+      "pricing": {
+        "monthly": 0,
+        "annual": 0,
+        "currency": "USD"
+      },
+      "limits": {
+        "flame_conversations_per_day": 5,
+        "daily_goals_max": 0,
+        "journal_retention_days": 0,
+        "api_calls_per_day": 0
+      },
+      "features": {
+        "avatar": {
+          "gender_selection": true,
+          "age_tier_selection": true,
+          "age_tier_switching": false,
+          "custom_name": false,
+          "custom_visuals": false,
+          "personality_sliders": false
+        },
+        "interactions": {
+          "flame_dialogues": true,
+          "daily_check_in": true,
+          "daily_reflection_prompt": true,
+          "crisis_detection": true,
+          "voice_tts": false,
+          "voice_stt": false
+        },
+        "journaling": {
+          "enabled": false,
+          "encryption": false,
+          "search": false,
+          "tags": false,
+          "unlimited_retention": false
+        },
+        "goals_structure": {
+          "daily_goals": false,
+          "reminders": false,
+          "guided_modules": false,
+          "mini_courses": false
+        },
+        "analytics": {
+          "current_mood": true,
+          "mood_trends": false,
+          "weekly_summary": false,
+          "pattern_detection": false,
+          "predictive_insights": false,
+          "export": false
+        },
+        "integrations": {
+          "calendar_sync": false,
+          "wearables": false,
+          "api_access": false
+        },
+        "advanced": {
+          "adaptive_modeling": false,
+          "human_coaching": false,
+          "concierge_support": false,
+          "priority_response": false
+        },
+        "privacy_control": {
+          "data_export": true,
+          "account_deletion": true,
+          "encryption": true
+        }
+      }
+    },
+    {
+      "id": 1,
+      "name": "Standard",
+      "display_name": "Ryvynn Standard",
+      "tagline": "Daily support with structure and history",
+      "pricing": {
+        "monthly": 9,
+        "annual": 90,
+        "currency": "USD",
+        "annual_savings_percent": 16.67
+      },
+      "stripe": {
+        "monthly_price_id": "price_standard_monthly",
+        "annual_price_id": "price_standard_annual"
+      },
+      "limits": {
+        "flame_conversations_per_day": 25,
+        "daily_goals_max": 3,
+        "journal_retention_days": 30,
+        "api_calls_per_day": 0
+      },
+      "features": {
+        "avatar": {
+          "gender_selection": true,
+          "age_tier_selection": true,
+          "age_tier_switching": true,
+          "custom_name": true,
+          "custom_visuals": false,
+          "personality_sliders": false
+        },
+        "interactions": {
+          "flame_dialogues": true,
+          "daily_check_in": true,
+          "daily_reflection_prompt": true,
+          "crisis_detection": true,
+          "voice_tts": false,
+          "voice_stt": false
+        },
+        "journaling": {
+          "enabled": true,
+          "encryption": true,
+          "search": true,
+          "tags": true,
+          "unlimited_retention": false
+        },
+        "goals_structure": {
+          "daily_goals": true,
+          "reminders": true,
+          "guided_modules": true,
+          "mini_courses": false
+        },
+        "analytics": {
+          "current_mood": true,
+          "mood_trends": false,
+          "weekly_summary": false,
+          "pattern_detection": false,
+          "predictive_insights": false,
+          "export": false
+        },
+        "integrations": {
+          "calendar_sync": false,
+          "wearables": false,
+          "api_access": false
+        },
+        "advanced": {
+          "adaptive_modeling": false,
+          "human_coaching": false,
+          "concierge_support": false,
+          "priority_response": false
+        },
+        "privacy_control": {
+          "data_export": true,
+          "account_deletion": true,
+          "encryption": true
+        }
+      }
+    },
+    {
+      "id": 2,
+      "name": "Enhanced",
+      "display_name": "Ryvynn Enhanced",
+      "tagline": "Insights and multimodal support",
+      "pricing": {
+        "monthly": 24,
+        "annual": 240,
+        "currency": "USD",
+        "annual_savings_percent": 16.67
+      },
+      "stripe": {
+        "monthly_price_id": "price_enhanced_monthly",
+        "annual_price_id": "price_enhanced_annual"
+      },
+      "limits": {
+        "flame_conversations_per_day": 75,
+        "daily_goals_max": 10,
+        "journal_retention_days": -1,
+        "api_calls_per_day": 0
+      },
+      "features": {
+        "avatar": {
+          "gender_selection": true,
+          "age_tier_selection": true,
+          "age_tier_switching": true,
+          "custom_name": true,
+          "custom_visuals": false,
+          "personality_sliders": false
+        },
+        "interactions": {
+          "flame_dialogues": true,
+          "daily_check_in": true,
+          "daily_reflection_prompt": true,
+          "crisis_detection": true,
+          "voice_tts": true,
+          "voice_stt": true
+        },
+        "journaling": {
+          "enabled": true,
+          "encryption": true,
+          "search": true,
+          "tags": true,
+          "unlimited_retention": true
+        },
+        "goals_structure": {
+          "daily_goals": true,
+          "reminders": true,
+          "guided_modules": true,
+          "mini_courses": true
+        },
+        "analytics": {
+          "current_mood": true,
+          "mood_trends": true,
+          "weekly_summary": true,
+          "pattern_detection": true,
+          "predictive_insights": false,
+          "export": false
+        },
+        "integrations": {
+          "calendar_sync": false,
+          "wearables": false,
+          "api_access": false
+        },
+        "advanced": {
+          "adaptive_modeling": false,
+          "human_coaching": false,
+          "concierge_support": false,
+          "priority_response": true
+        },
+        "privacy_control": {
+          "data_export": true,
+          "account_deletion": true,
+          "encryption": true
+        }
+      }
+    },
+    {
+      "id": 3,
+      "name": "Pro",
+      "display_name": "Ryvynn Pro",
+      "tagline": "Integration and automation for busy lives",
+      "pricing": {
+        "monthly": 49,
+        "annual": 490,
+        "currency": "USD",
+        "annual_savings_percent": 16.67
+      },
+      "stripe": {
+        "monthly_price_id": "price_pro_monthly",
+        "annual_price_id": "price_pro_annual"
+      },
+      "limits": {
+        "flame_conversations_per_day": -1,
+        "daily_goals_max": -1,
+        "journal_retention_days": -1,
+        "api_calls_per_day": 1000
+      },
+      "features": {
+        "avatar": {
+          "gender_selection": true,
+          "age_tier_selection": true,
+          "age_tier_switching": true,
+          "custom_name": true,
+          "custom_visuals": false,
+          "personality_sliders": false
+        },
+        "interactions": {
+          "flame_dialogues": true,
+          "daily_check_in": true,
+          "daily_reflection_prompt": true,
+          "crisis_detection": true,
+          "voice_tts": true,
+          "voice_stt": true
+        },
+        "journaling": {
+          "enabled": true,
+          "encryption": true,
+          "search": true,
+          "tags": true,
+          "unlimited_retention": true
+        },
+        "goals_structure": {
+          "daily_goals": true,
+          "reminders": true,
+          "guided_modules": true,
+          "mini_courses": true
+        },
+        "analytics": {
+          "current_mood": true,
+          "mood_trends": true,
+          "weekly_summary": true,
+          "pattern_detection": true,
+          "predictive_insights": false,
+          "export": true
+        },
+        "integrations": {
+          "calendar_sync": true,
+          "wearables": true,
+          "api_access": true
+        },
+        "advanced": {
+          "adaptive_modeling": true,
+          "human_coaching": false,
+          "concierge_support": false,
+          "priority_response": true
+        },
+        "privacy_control": {
+          "data_export": true,
+          "account_deletion": true,
+          "encryption": true
+        }
+      }
+    },
+    {
+      "id": 4,
+      "name": "Infinite",
+      "display_name": "Ryvynn Infinite",
+      "tagline": "Ultimate customization and predictive insights",
+      "pricing": {
+        "monthly": 99,
+        "annual": 990,
+        "currency": "USD",
+        "annual_savings_percent": 16.67
+      },
+      "stripe": {
+        "monthly_price_id": "price_infinite_monthly",
+        "annual_price_id": "price_infinite_annual"
+      },
+      "limits": {
+        "flame_conversations_per_day": -1,
+        "daily_goals_max": -1,
+        "journal_retention_days": -1,
+        "api_calls_per_day": -1
+      },
+      "features": {
+        "avatar": {
+          "gender_selection": true,
+          "age_tier_selection": true,
+          "age_tier_switching": true,
+          "custom_name": true,
+          "custom_visuals": true,
+          "personality_sliders": true
+        },
+        "interactions": {
+          "flame_dialogues": true,
+          "daily_check_in": true,
+          "daily_reflection_prompt": true,
+          "crisis_detection": true,
+          "voice_tts": true,
+          "voice_stt": true
+        },
+        "journaling": {
+          "enabled": true,
+          "encryption": true,
+          "search": true,
+          "tags": true,
+          "unlimited_retention": true
+        },
+        "goals_structure": {
+          "daily_goals": true,
+          "reminders": true,
+          "guided_modules": true,
+          "mini_courses": true
+        },
+        "analytics": {
+          "current_mood": true,
+          "mood_trends": true,
+          "weekly_summary": true,
+          "pattern_detection": true,
+          "predictive_insights": true,
+          "export": true
+        },
+        "integrations": {
+          "calendar_sync": true,
+          "wearables": true,
+          "api_access": true
+        },
+        "advanced": {
+          "adaptive_modeling": true,
+          "human_coaching": true,
+          "concierge_support": true,
+          "priority_response": true
+        },
+        "privacy_control": {
+          "data_export": true,
+          "account_deletion": true,
+          "encryption": true
+        }
+      }
+    }
+  ],
+  "addons": [
+    {
+      "id": "premium_avatar_visual_pack",
+      "name": "Premium Avatar Visual Pack",
+      "description": "High-fidelity avatar visuals (10 options)",
+      "price": 4.99,
+      "type": "one_time",
+      "stripe_price_id": "price_avatar_visual_pack",
+      "available_for_tiers": [0, 1, 2, 3]
+    },
+    {
+      "id": "premium_voice_pack",
+      "name": "Premium Voice Pack",
+      "description": "Celebrity/professional voice options (5 voices)",
+      "price": 7.99,
+      "type": "one_time",
+      "stripe_price_id": "price_voice_pack",
+      "available_for_tiers": [2, 3]
+    },
+    {
+      "id": "analytics_deep_dive",
+      "name": "Analytics Deep Dive Report",
+      "description": "90-day detailed wellness analysis",
+      "price": 9.99,
+      "type": "one_time",
+      "stripe_price_id": "price_analytics_deep_dive",
+      "available_for_tiers": [2, 3, 4]
+    },
+    {
+      "id": "community_dashboard",
+      "name": "Community Dashboard Access",
+      "description": "Share anonymized data with research; see community trends",
+      "price": 14,
+      "type": "recurring_monthly",
+      "stripe_price_id": "price_community_dashboard",
+      "available_for_tiers": [1, 2, 3, 4]
+    },
+    {
+      "id": "clinician_dashboard",
+      "name": "Clinician Dashboard",
+      "description": "Share data with therapist (HIPAA-compliant export)",
+      "price": 29,
+      "type": "recurring_monthly",
+      "stripe_price_id": "price_clinician_dashboard",
+      "available_for_tiers": [2, 3, 4]
+    }
+  ],
+  "feature_keys": [
+    {
+      "key": "avatar.custom_visuals",
+      "name": "Custom Avatar Visuals",
+      "min_tier": 4,
+      "description": "Upload or generate custom avatar images"
+    },
+    {
+      "key": "avatar.personality_sliders",
+      "name": "Personality Sliders",
+      "min_tier": 4,
+      "description": "Adjust warmth, directness, humor, formality"
+    },
+    {
+      "key": "interactions.voice_tts",
+      "name": "Text-to-Speech",
+      "min_tier": 2,
+      "description": "Listen to Flame responses"
+    },
+    {
+      "key": "interactions.voice_stt",
+      "name": "Speech-to-Text",
+      "min_tier": 2,
+      "description": "Speak your messages"
+    },
+    {
+      "key": "journaling.enabled",
+      "name": "Journaling",
+      "min_tier": 1,
+      "description": "Save and review journal entries"
+    },
+    {
+      "key": "goals_structure.daily_goals",
+      "name": "Daily Goals",
+      "min_tier": 1,
+      "description": "Set and track daily goals"
+    },
+    {
+      "key": "goals_structure.mini_courses",
+      "name": "Mini-Courses",
+      "min_tier": 2,
+      "description": "Structured wellness programs"
+    },
+    {
+      "key": "analytics.weekly_summary",
+      "name": "Weekly Summary",
+      "min_tier": 2,
+      "description": "Email analytics reports"
+    },
+    {
+      "key": "analytics.export",
+      "name": "Analytics Export",
+      "min_tier": 3,
+      "description": "Download data in CSV/JSON"
+    },
+    {
+      "key": "integrations.calendar_sync",
+      "name": "Calendar Integration",
+      "min_tier": 3,
+      "description": "Sync with Google/Apple/Outlook"
+    },
+    {
+      "key": "integrations.wearables",
+      "name": "Wearable Integration",
+      "min_tier": 3,
+      "description": "Connect fitness trackers"
+    },
+    {
+      "key": "integrations.api_access",
+      "name": "API Access",
+      "min_tier": 3,
+      "description": "RESTful API for automation"
+    },
+    {
+      "key": "advanced.adaptive_modeling",
+      "name": "Adaptive Modeling",
+      "min_tier": 3,
+      "description": "Personalized guidance from patterns"
+    },
+    {
+      "key": "advanced.predictive_insights",
+      "name": "Predictive Insights",
+      "min_tier": 4,
+      "description": "Forecast wellness trends"
+    },
+    {
+      "key": "advanced.human_coaching",
+      "name": "Human-AI Coaching",
+      "min_tier": 4,
+      "description": "Connect with licensed therapists"
+    },
+    {
+      "key": "advanced.concierge_support",
+      "name": "Concierge Support",
+      "min_tier": 4,
+      "description": "Priority customer service"
+    }
+  ]
+}
