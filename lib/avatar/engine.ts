@@ -202,16 +202,14 @@ function applyPersonalitySliders(text: string, profile: AvatarProfile): string {
 // ============================================
 
 function loadGenderPersona(id: string): GenderPersona {
-  return (
-    avatarProfilesData.gender_personas.find((p) => p.id === id) ||
+  const persona = avatarProfilesData.gender_personas.find((p) => p.id === id) ||
     avatarProfilesData.gender_personas[0]
-  )
+  return persona as GenderPersona
 }
 
 function loadAgeTier(id: string): AgeTier {
-  return (
-    avatarProfilesData.age_tiers.find((a) => a.id === id) || avatarProfilesData.age_tiers[0]
-  )
+  const ageTier = avatarProfilesData.age_tiers.find((a) => a.id === id) || avatarProfilesData.age_tiers[0]
+  return ageTier as AgeTier
 }
 
 function ageTierToNumber(id: string): number {

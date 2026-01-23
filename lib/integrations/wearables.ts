@@ -180,7 +180,7 @@ export function analyzeHealthMetrics(metrics: HealthMetrics): {
   if (metrics.steps !== undefined) {
     if (metrics.steps < 3000) {
       activityLevel = 'sedentary'
-      insights.push('You've been less active today. A short walk could help boost your mood.')
+      insights.push("You've been less active today. A short walk could help boost your mood.")
     } else if (metrics.steps > 10000) {
       activityLevel = 'active'
       insights.push('Great activity level today!')

@@ -106,7 +106,7 @@ export interface AddOn {
   feature_unlocks?: string[]
 }
 
-export interface FeatureKey {
+export interface FeatureKeyDefinition {
   feature_key: string
   display_name: string
   description: string

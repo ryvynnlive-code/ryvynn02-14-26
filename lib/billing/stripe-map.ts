@@ -225,6 +225,7 @@ export const TIER_NAMES: Record<Tier, string> = {
   2: 'Enhanced',
   3: 'Pro',
   4: 'Infinite',
+  5: 'Transcendent',
 }
 
 /**

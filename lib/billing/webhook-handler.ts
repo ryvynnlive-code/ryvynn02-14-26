@@ -180,8 +180,8 @@ async function handleSubscriptionDeleted(subscription: Stripe.Subscription): Pro
 // ============================================
 
 async function handlePaymentSuccess(invoice: Stripe.Invoice): Promise<void> {
-  const subscriptionId = invoice.subscription as string
-  const customerId = invoice.customer as string
+  const subscriptionId = (invoice as any).subscription as string
+  const customerId = (invoice as any).customer as string
   const amountPaid = invoice.amount_paid / 100 // Convert cents to dollars
 
   // TODO: Log payment event
@@ -203,8 +203,8 @@ async function handlePaymentSuccess(invoice: Stripe.Invoice): Promise<void> {
 // ============================================
 
 async function handlePaymentFailed(invoice: Stripe.Invoice): Promise<void> {
-  const subscriptionId = invoice.subscription as string
-  const customerId = invoice.customer as string
+  const subscriptionId = (invoice as any).subscription as string
+  const customerId = (invoice as any).customer as string
 
   // TODO: Log failure and notify user
   // await supabase.from('payment_events').insert({

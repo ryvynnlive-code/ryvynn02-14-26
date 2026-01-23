@@ -40,7 +40,7 @@ export async function checkFeature(
 
   // Load feature definition from tier_matrix.json
   const featureDefinition = tierMatrix.feature_keys.find(
-    (f: FeatureKey) => f.feature_key === featureKey
+    (f: any) => f.key === featureKey || f.feature_key === featureKey
   )
 
   if (!featureDefinition) {
@@ -51,12 +51,13 @@ export async function checkFeature(
   }
 
   // Check tier requirement
-  if (entitlement.current_tier < featureDefinition.minimum_tier) {
+  const minTier = (featureDefinition as any).min_tier || (featureDefinition as any).minimum_tier
+  if (entitlement.current_tier < minTier) {
     return {
       entitled: false,
-      reason: `Requires ${getTierName(featureDefinition.minimum_tier)} tier or higher`,
+      reason: `Requires ${getTierName(minTier)} tier or higher`,
       current_tier: entitlement.current_tier,
-      required_tier: featureDefinition.minimum_tier,
+      required_tier: minTier,
       upgrade_url: '/app/settings?tab=subscription',
     }
   }
@@ -107,8 +108,8 @@ export async function getEnabledFeatures(userId: string): Promise<string[]> {
   const tier = await getCurrentTier(userId)
 
   const enabledFeatures = tierMatrix.feature_keys
-    .filter((f: FeatureKey) => f.minimum_tier <= tier)
-    .map((f: FeatureKey) => f.feature_key)
+    .filter((f: any) => (f.min_tier || f.minimum_tier) <= tier)
+    .map((f: any) => f.key || f.feature_key)
 
   return enabledFeatures
 }
@@ -253,6 +254,7 @@ function getTierName(tier: Tier): string {
     2: 'Enhanced',
     3: 'Pro',
     4: 'Infinite',
+    5: 'Transcendent',
   }
   return names[tier] || 'Unknown'
 }
