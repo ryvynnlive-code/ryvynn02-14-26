@@ -6,7 +6,10 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "deploy": "./scripts/deploy-full.sh",
+    "setup:stripe": "node scripts/setup-stripe-products.js",
+    "setup:migrations": "node scripts/apply-migrations.js"
   },
   "dependencies": {
     "@supabase/ssr": "^0.8.0",
