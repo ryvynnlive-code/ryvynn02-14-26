@@ -7,7 +7,7 @@
 
 import Stripe from 'stripe'
 import { createClient } from '@/lib/supabase/server'
-import { getPriceIdForTier, getPriceIdForAddOn, getTierName } from './stripe-map'
+import { getPriceIdForTier, getPriceIdForAddOn, getTierName } from './stripe-map-omega'
 import { Tier, BillingCadence } from '@/types/tiers'
 
 const stripe = new Stripe(process.env.STRIPE_SECRET_KEY!, {

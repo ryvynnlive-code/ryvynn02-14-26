@@ -178,3 +178,25 @@ export const TIER_NAMES: Record<Tier, string> = {
 export function getTierName(tier: Tier): string {
   return TIER_NAMES[tier] || 'Unknown'
 }
+
+// ============================================
+// ADD-ON SUPPORT (STUB)
+// ============================================
+
+/**
+ * Get add-on from price ID
+ * NOTE: Add-ons not yet implemented in OMEGA
+ */
+export function getAddOnFromPriceId(priceId: string): string | null {
+  // TODO: Implement add-ons for OMEGA
+  return null
+}
+
+/**
+ * Get price ID for add-on
+ * NOTE: Add-ons not yet implemented in OMEGA
+ */
+export function getPriceIdForAddOn(addonKey: string): string | null {
+  // TODO: Implement add-ons for OMEGA
+  return null
+}

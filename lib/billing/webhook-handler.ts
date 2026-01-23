@@ -5,9 +5,9 @@
 
 import Stripe from 'stripe'
 import { createClient } from '@/lib/supabase/server'
-import { getTierFromPriceId, getAddOnFromPriceId, getTierName } from './stripe-map'
+import { getTierFromPriceId, getAddOnFromPriceId, getTierName } from './stripe-map-omega'
 import { Tier, TIER_VERSION } from '@/types/tiers'
-import tierMatrix from '@/data/tier_matrix.json'
+import tierMatrix from '@/data/tier_matrix_omega.json'
 
 const supabase = createClient()
 

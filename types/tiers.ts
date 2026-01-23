@@ -3,7 +3,7 @@
  * Maps to /data/tier_matrix.json structure
  */
 
-export type Tier = 0 | 1 | 2 | 3 | 4
+export type Tier = 0 | 1 | 2 | 3 | 4 | 5
 
 export interface TierDefinition {
   id: Tier
@@ -153,7 +153,7 @@ export enum FeatureKey {
  * Tier version constant for grandfathering
  * Update this when tier structure changes
  */
-export const TIER_VERSION = '2026-01-v1' as const
+export const TIER_VERSION = '2026-01-omega' as const
 
 /**
  * Billing cadence options
