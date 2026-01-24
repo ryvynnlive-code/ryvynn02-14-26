@@ -4,7 +4,7 @@ import { createClient, createAdminClient } from '@/lib/supabase/server'
 import { generateFlameResponse, detectCrisisLevel, getCrisisSafetyMessage } from '@/lib/flame/engine'
 import { redirect } from 'next/navigation'
 import { getCurrentTier } from '@/lib/features/flags'
-import { getTierName } from '@/lib/billing/stripe-map'
+import { getTierName } from '@/lib/billing/stripe-map-omega'
 
 export async function callFlame(userMessage: string) {
   try {

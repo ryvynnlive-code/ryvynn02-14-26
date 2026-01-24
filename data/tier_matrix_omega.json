@@ -1,0 +1,375 @@
+{
+  "version": "RYVYNN_OMEGA_v1.0",
+  "tiers": [
+    {
+      "id": 0,
+      "name": "Free",
+      "display_name": "RYVYNN Free",
+      "tagline": "Experience truth without commitment",
+      "pricing": {
+        "monthly": 0,
+        "annual": 0,
+        "currency": "USD"
+      },
+      "limits": {
+        "truth_reads_per_day": 3,
+        "truth_posts_per_day": 0,
+        "flame_conversations_per_day": 5,
+        "daily_goals_max": 0,
+        "journal_retention_days": 0,
+        "api_calls_per_day": 0
+      },
+      "soul_tokens": {
+        "earn_rate": 1,
+        "can_allocate_impact": false
+      },
+      "avatar_evolution": {
+        "enabled": false,
+        "max_stage": 0
+      },
+      "features": {
+        "truth_feed_read": true,
+        "truth_feed_post": false,
+        "flame_dialogues": true,
+        "journaling": false,
+        "avatar_evolution": false,
+        "analytics": false,
+        "voice": false,
+        "integrations": false,
+        "impact_allocation": false,
+        "blessings": false
+      }
+    },
+    {
+      "id": 1,
+      "name": "Spark",
+      "display_name": "RYVYNN Spark",
+      "tagline": "Share your truth, begin your evolution",
+      "pricing": {
+        "monthly": 12,
+        "annual": 120,
+        "currency": "USD",
+        "annual_savings_percent": 16.67
+      },
+      "stripe": {
+        "monthly_price_id": "price_spark_monthly",
+        "annual_price_id": "price_spark_annual"
+      },
+      "limits": {
+        "truth_reads_per_day": -1,
+        "truth_posts_per_day": 3,
+        "flame_conversations_per_day": 25,
+        "daily_goals_max": 3,
+        "journal_retention_days": 30,
+        "api_calls_per_day": 0
+      },
+      "soul_tokens": {
+        "earn_rate": 2,
+        "can_allocate_impact": false
+      },
+      "avatar_evolution": {
+        "enabled": true,
+        "max_stage": 1,
+        "stage_name": "Ember"
+      },
+      "features": {
+        "truth_feed_read": true,
+        "truth_feed_post": true,
+        "flame_dialogues": true,
+        "journaling": true,
+        "avatar_evolution": true,
+        "analytics": false,
+        "voice": false,
+        "integrations": false,
+        "impact_allocation": false,
+        "blessings": true
+      }
+    },
+    {
+      "id": 2,
+      "name": "Blaze",
+      "display_name": "RYVYNN Blaze",
+      "tagline": "Deepen insight, amplify impact",
+      "pricing": {
+        "monthly": 36,
+        "annual": 360,
+        "currency": "USD",
+        "annual_savings_percent": 16.67
+      },
+      "stripe": {
+        "monthly_price_id": "price_blaze_monthly",
+        "annual_price_id": "price_blaze_annual"
+      },
+      "limits": {
+        "truth_reads_per_day": -1,
+        "truth_posts_per_day": 10,
+        "flame_conversations_per_day": 75,
+        "daily_goals_max": 10,
+        "journal_retention_days": -1,
+        "api_calls_per_day": 0
+      },
+      "soul_tokens": {
+        "earn_rate": 3,
+        "can_allocate_impact": true,
+        "impact_weight": 1
+      },
+      "avatar_evolution": {
+        "enabled": true,
+        "max_stage": 2,
+        "stage_name": "Flame"
+      },
+      "features": {
+        "truth_feed_read": true,
+        "truth_feed_post": true,
+        "flame_dialogues": true,
+        "journaling": true,
+        "avatar_evolution": true,
+        "analytics": true,
+        "voice": true,
+        "integrations": false,
+        "impact_allocation": true,
+        "blessings": true
+      }
+    },
+    {
+      "id": 3,
+      "name": "Radiance",
+      "display_name": "RYVYNN Radiance",
+      "tagline": "Integrate your practice, expand your reach",
+      "pricing": {
+        "monthly": 64,
+        "annual": 640,
+        "currency": "USD",
+        "annual_savings_percent": 16.67
+      },
+      "stripe": {
+        "monthly_price_id": "price_radiance_monthly",
+        "annual_price_id": "price_radiance_annual"
+      },
+      "limits": {
+        "truth_reads_per_day": -1,
+        "truth_posts_per_day": -1,
+        "flame_conversations_per_day": 999999,
+        "daily_goals_max": -1,
+        "journal_retention_days": -1,
+        "api_calls_per_day": 1000
+      },
+      "soul_tokens": {
+        "earn_rate": 5,
+        "can_allocate_impact": true,
+        "impact_weight": 2
+      },
+      "avatar_evolution": {
+        "enabled": true,
+        "max_stage": 3,
+        "stage_name": "Pillar"
+      },
+      "features": {
+        "truth_feed_read": true,
+        "truth_feed_post": true,
+        "flame_dialogues": true,
+        "journaling": true,
+        "avatar_evolution": true,
+        "analytics": true,
+        "voice": true,
+        "integrations": true,
+        "api_access": true,
+        "impact_allocation": true,
+        "blessings": true
+      }
+    },
+    {
+      "id": 4,
+      "name": "Sovereign",
+      "display_name": "RYVYNN Sovereign",
+      "tagline": "Master your path, light the way for others",
+      "pricing": {
+        "monthly": 96,
+        "annual": 960,
+        "currency": "USD",
+        "annual_savings_percent": 16.67
+      },
+      "stripe": {
+        "monthly_price_id": "price_sovereign_monthly",
+        "annual_price_id": "price_sovereign_annual"
+      },
+      "limits": {
+        "truth_reads_per_day": -1,
+        "truth_posts_per_day": -1,
+        "flame_conversations_per_day": 999999,
+        "daily_goals_max": -1,
+        "journal_retention_days": -1,
+        "api_calls_per_day": 5000
+      },
+      "soul_tokens": {
+        "earn_rate": 8,
+        "can_allocate_impact": true,
+        "impact_weight": 3
+      },
+      "avatar_evolution": {
+        "enabled": true,
+        "max_stage": 4,
+        "stage_name": "Beacon"
+      },
+      "features": {
+        "truth_feed_read": true,
+        "truth_feed_post": true,
+        "flame_dialogues": true,
+        "journaling": true,
+        "avatar_evolution": true,
+        "analytics": true,
+        "voice": true,
+        "integrations": true,
+        "api_access": true,
+        "impact_allocation": true,
+        "predictive_insights": true,
+        "priority_support": true,
+        "blessings": true
+      }
+    },
+    {
+      "id": 5,
+      "name": "Transcendent",
+      "display_name": "RYVYNN Transcendent",
+      "tagline": "Transform truth into lasting change",
+      "pricing": {
+        "monthly": 936,
+        "annual": 9360,
+        "currency": "USD",
+        "annual_savings_percent": 16.67
+      },
+      "stripe": {
+        "monthly_price_id": "price_transcendent_monthly",
+        "annual_price_id": "price_transcendent_annual"
+      },
+      "limits": {
+        "truth_reads_per_day": -1,
+        "truth_posts_per_day": -1,
+        "flame_conversations_per_day": 999999,
+        "daily_goals_max": -1,
+        "journal_retention_days": -1,
+        "api_calls_per_day": 50000
+      },
+      "soul_tokens": {
+        "earn_rate": 15,
+        "can_allocate_impact": true,
+        "impact_weight": 5
+      },
+      "avatar_evolution": {
+        "enabled": true,
+        "max_stage": 5,
+        "stage_name": "Sovereign"
+      },
+      "features": {
+        "truth_feed_read": true,
+        "truth_feed_post": true,
+        "flame_dialogues": true,
+        "journaling": true,
+        "avatar_evolution": true,
+        "analytics": true,
+        "voice": true,
+        "integrations": true,
+        "api_access": true,
+        "impact_allocation": true,
+        "predictive_insights": true,
+        "priority_support": true,
+        "legacy_features": true,
+        "vip_support": true,
+        "blessings": true
+      }
+    }
+  ],
+  "feature_keys": [
+    {
+      "feature_key": "truth_feed_read",
+      "display_name": "Read Truth Feed",
+      "description": "View anonymous truth posts from the community",
+      "minimum_tier": 0,
+      "category": "truth"
+    },
+    {
+      "feature_key": "truth_feed_post",
+      "display_name": "Post to Truth Feed",
+      "description": "Share your own truth anonymously",
+      "minimum_tier": 1,
+      "category": "truth"
+    },
+    {
+      "feature_key": "flame_dialogues",
+      "display_name": "Flame Conversations",
+      "description": "Chat with The Flame for guidance",
+      "minimum_tier": 0,
+      "category": "interactions"
+    },
+    {
+      "feature_key": "journaling",
+      "display_name": "Encrypted Journaling",
+      "description": "Private, encrypted journal entries",
+      "minimum_tier": 1,
+      "category": "journaling"
+    },
+    {
+      "feature_key": "avatar_evolution",
+      "display_name": "Avatar Evolution",
+      "description": "Grow your avatar through consistent practice",
+      "minimum_tier": 1,
+      "category": "avatar"
+    },
+    {
+      "feature_key": "analytics",
+      "display_name": "Personal Analytics",
+      "description": "Track patterns and progress over time",
+      "minimum_tier": 2,
+      "category": "analytics"
+    },
+    {
+      "feature_key": "voice",
+      "display_name": "Voice Interaction",
+      "description": "Text-to-speech and speech-to-text",
+      "minimum_tier": 2,
+      "category": "interactions"
+    },
+    {
+      "feature_key": "integrations",
+      "display_name": "Calendar & Wearable Sync",
+      "description": "Connect external services",
+      "minimum_tier": 3,
+      "category": "integrations"
+    },
+    {
+      "feature_key": "api_access",
+      "display_name": "API Access",
+      "description": "Programmatic access to your data",
+      "minimum_tier": 3,
+      "category": "integrations"
+    },
+    {
+      "feature_key": "impact_allocation",
+      "display_name": "Impact Allocation",
+      "description": "Participate in real-world support decisions",
+      "minimum_tier": 2,
+      "category": "impact"
+    },
+    {
+      "feature_key": "predictive_insights",
+      "display_name": "Predictive Insights",
+      "description": "AI-powered pattern recognition",
+      "minimum_tier": 4,
+      "category": "analytics"
+    },
+    {
+      "feature_key": "priority_support",
+      "display_name": "Priority Support",
+      "description": "Faster response times",
+      "minimum_tier": 4,
+      "category": "support"
+    },
+    {
+      "feature_key": "blessings",
+      "display_name": "Random Blessings",
+      "description": "Surprise gifts and benefits",
+      "minimum_tier": 1,
+      "category": "rewards"
+    }
+  ]
+}
