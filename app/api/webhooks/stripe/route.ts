@@ -18,10 +18,6 @@ import { NextRequest, NextResponse } from 'next/server'
 import Stripe from 'stripe'
 import { handleWebhookEvent } from '@/lib/billing/webhook-handler'
 
-const stripe = new Stripe(process.env.STRIPE_SECRET_KEY!, {
-  apiVersion: '2025-12-15.clover',
-})
-
 // Disable body parsing for signature verification
 export const runtime = 'nodejs'
 
@@ -30,6 +26,11 @@ export const runtime = 'nodejs'
  * Handles incoming Stripe webhook events
  */
 export async function POST(req: NextRequest) {
+  // Lazy initialize Stripe client to avoid build-time errors
+  const stripe = new Stripe(process.env.STRIPE_SECRET_KEY || '', {
+    apiVersion: '2025-12-15.clover',
+  })
+
   const body = await req.text()
   const signature = req.headers.get('stripe-signature')
 
@@ -45,7 +46,7 @@ export async function POST(req: NextRequest) {
     event = stripe.webhooks.constructEvent(
       body,
       signature,
-      process.env.STRIPE_WEBHOOK_SECRET!
+      process.env.STRIPE_WEBHOOK_SECRET || ''
     )
   } catch (err: any) {
     console.error('Webhook signature verification failed:', err.message)

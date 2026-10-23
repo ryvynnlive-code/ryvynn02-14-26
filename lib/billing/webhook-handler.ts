@@ -9,8 +9,6 @@ import { getTierFromPriceId, getAddOnFromPriceId, getTierName } from './stripe-m
 import { Tier, TIER_VERSION } from '@/types/tiers'
 import tierMatrix from '@/data/tier_matrix_omega.json'
 
-const supabase = createClient()
-
 // ============================================
 // EVENT PROCESSING
 // ============================================
